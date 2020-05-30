@@ -34,13 +34,14 @@ STATICFILES_DIRS = [STATIC_DIR,]
 # Application definition
 
 INSTALLED_APPS = [
+    'rango',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rango',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -131,4 +132,9 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_URL = 'rango:login'
+
+# Registration configuration
+REGISTRATION_OPEN = True
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = 'rango:index'
+LOGIN_URL = 'auth_login'
