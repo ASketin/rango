@@ -7,19 +7,17 @@
 
 {% block body_block%}
     <div class="jumbotron p-1">
-        <div class="container">
-            <h1 class="jumbotron-heading">Rango says...</h1>
+            <h1 class="display-4">Rango says...</h1>
             <div>
-                <h2 class="h2">
+                 <p class="lead">
                 {% if user.is_authenticated %}
                     howdy {{ user.username }}!
                 {% else %}
                     hey there partner!
                 {% endif %}
-                </h2>
+                 </p>
             <strong>{{ boldmessage }}</strong>
             </div>
-        </div>
     </div>
     <div class="container">
         <div class="row">
